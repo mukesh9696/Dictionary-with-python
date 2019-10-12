@@ -4,6 +4,8 @@ from difflib import get_close_matches
 data = json.load(open("data.json"))
 
 def translate(w):
+    
+    """function for translation"""
     w = w.lower()
     if w in data:
         return data[w]
@@ -24,7 +26,7 @@ def translate(w):
     else:
         print("Word is not exist")
 
-
+"""Taking input fom the user and then displaying the result"""
 word = input("Enter Word:")
 output = translate(word)
 
